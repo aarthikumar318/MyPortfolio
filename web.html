@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarthi Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="web.css" />
+</head>
+<body>
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+    <div class="logo">Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="section visible" data-aos="fade-up">
+      <div class="hero">
+        <div class="left">
+          <h2>Hii!!</h2>
+          <h1>I'm <span class="highlight">Aarthi Kumar</span></h1>
+          <div class="role">Frontend Developer</div>
+          <p>I'm a passionate developer skilled in HTML, CSS, JavaScript, Flutter, and backend basics. I love building beautiful and responsive UIs.</p>
+          <div class="social-icons">
+  <a href="https://github.com/aarthikumar318" target="_blank"><i class='bx bxl-github'></i></a>
+  <a href="https://linkedin.com/in/aarthikumar318" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+  <a href="https://instagram.com/xio._.mxra" target="_blank"><i class='bx bxl-instagram'></i></a>
+          </div>
+        </div>
+        <div class="profile-card" data-aos="zoom-in">
+          <img src="C:/Users/kaart/OneDrive/Documents/aarthi.jpg" alt="Aarthi Photo" class="profile-img" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section" data-aos="fade-up">
+
+  <div class="intro-header">
+    <h1 class="name-heading">AARTHI KUMAR</h1>
+    <h3 class="role-heading">Aspiring Fullstack Developer</h3>
+    <p class="quote">"Transforming ideas into functional applications through clean code and innovative thinking."</p>
+   <a href="c:\Users\kaart\OneDrive\Documents\resume.pdf" target="_blank" class="download-btn">View Full Resume</a>
+  </div>
+
+  <div class="tab-container">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="showTab('skills')">Main Skills</button>
+      <button class="tab-btn" onclick="showTab('experience')">Experience</button>
+      <button class="tab-btn" onclick="showTab('education')">Educational Qualifications</button>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-panel active" id="skills">
+        <ul>
+          <li><strong>Programming Language</strong> – Java, C, Python</li>
+          <li><strong>Web and UI Development</strong> – HTML, CSS, JS, Flutter</li>
+          <li><strong>Learning</strong> – ReactJS</li>
+        </ul>
+      </div>
+      <div class="tab-panel" id="experience">
+        <ul>
+          <li>GenAI Developer Intern – OneYes InfoTech Solutions (July 2025 – Present)</li>
+          <li>Web Developer Intern – Stack Queue Education (2024)</li>
+        </ul>
+      </div>
+      <div class="tab-panel" id="education">
+        <ul>
+          <li>B.E - CSE at K.S.R COLLEGE OF ENGINEERING (2023–2027)</li>
+          <li>HSLC at SRI RAGHAVENDRA MATRIC HIGHER SECONDARY SCHOOL (2021–2023)</li>
+          <li>SSLC at WESTERN GATE MATRICULATION SCHOOL (2020–2021)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="skills" class="section" data-aos="fade-up">
+      <div class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Flutter & Dart</li>
+          <li>Java</li>
+          <li>Responsive UI Design</li>
+        </ul>
+      </div>
+    </section>
+<!--certificates -->
+    <section id="certificates" class="section" data-aos="fade-up">
+  <div class="card">
+    <h2>Certificates</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card" onclick="showCertificate('cert1')">
+        <h3>Web development</h3>
+        <p>Corizo</p>
+      </div>
+      <div class="certificate-card" onclick="showCertificate('cert2')">
+        <h3>Web development</h3>
+        <p>Stack Queue Education</p>
+      </div>
+      <div class="certificate-card" onclick="showCertificate('cert3')">
+        <h3>Cloud Computing</h3>
+        <p>NPTEL</p>
+      </div>
+      <div class="certificate-card" onclick="showCertificate('cert4')">
+        <h3>Internet of Things</h3>
+        <p>NPTEL</p>
+      </div>
+      <div class="certificate-card" onclick="showCertificate('cert5')">
+        <h3>Paper presented on Blockchain Technology</h3>
+        <p>Kongu College Of Engineering</p>
+      </div>
+        <div class="certificate-card" onclick="showCertificate('cert6')">
+        <h3>Paper presented on UI & UX design</h3>
+        <p>Bannari Amman Institute Of Technology</p>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </div>
+
+  <!-- Fullscreen Modal -->
+  <div class="certificate-modal" id="certModal">
+    <span class="close-btn" onclick="closeCertificate()">✖</span>
+    <img id="certImage" src="" alt="Certificate Image" />
+  </div>
+</section>
+
+    <section id="contact" class="section" data-aos="fade-up">
+      <div class="contact-container">
+  <h2 class="section-title">Get In Touch</h2>
+  <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you!');">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+    </section>
+  </main>
+
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
+    document.getElementById(id).classList.add('visible');
+  }
+
+  function toggleCertificate(id) {
+    const cert = document.getElementById(id);
+    cert.style.display = (cert.style.display === "block") ? "none" : "block";
+  }
+
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+      panel.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+  //for resume
+  function showCertificate(certId) {
+  const imageMap = {
+    cert1: "corizo.jpg",
+    cert2: "stack queue.jpg",
+    cert3: "cloud computing.jpg",
+    cert4: "iot.jpg",
+cert5: "kongu ppt.jpg" ,
+cert6: "bannari.jpg"   // Add more certificates as needed
+  };
+
+  const modal = document.getElementById("certModal");
+  const img = document.getElementById("certImage");
+
+  img.src = imageMap[certId];
+  modal.style.display = "flex";
+}
+
+function closeCertificate() {
+  document.getElementById("certModal").style.display = "none";
+  document.getElementById("certImage").src = "";
+}
+//for mobile(menu)
+function toggleMenu() {
+  const nav = document.querySelector("#navMenu ul");
+  nav.classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>
